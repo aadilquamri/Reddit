@@ -16,7 +16,7 @@ from langchain.chains import RetrievalQA
 # Load environment variables
 # -----------------------
 load_dotenv()
-os.environ["GROQ_API_KEY"] = "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"
+os.environ["GROQ_API_KEY"] = ""
 os.environ["GROQ_API_KEY"] = os.getenv("GROQ_API_KEY", "your_groq_api_key")
 os.environ["LANGCHAIN_API_KEY "] = os.getenv("Langchain_api_key", "your_langchain_api_key")
 
@@ -92,4 +92,5 @@ if prompt := st.chat_input("Type your input here......"):
     st.session_state.messages.append({"role": "assistant", "content": response})
     with st.chat_message("assistant"):
         st.markdown(response)
+
     
